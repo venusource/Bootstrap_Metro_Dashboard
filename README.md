@@ -5,6 +5,8 @@ A Metro Style Dashboard Template with Twitter Bootstrap
 
 Demo: http://jiji262.github.io/Bootstrap_Metro_Dashboard/
 
+*NOTE:* Please STAR this project and *FOLLOW* my github to keep to update of this template.
+
 
 Description
 ----------------------------
