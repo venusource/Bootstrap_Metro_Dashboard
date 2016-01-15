@@ -380,13 +380,20 @@ function template_functions(){
 	});
 
 	/* ---------- Datable ---------- */
-	$('.datatable').dataTable({
-			"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
-			"sPaginationType": "bootstrap",
-			"oLanguage": {
-			"sLengthMenu": "_MENU_ records per page"
-			}
-		} );
+        $('.datatable').dataTable({
+                      "sDom": "<'row-fluid'<'span6'f>r>t<'row-fluid'<'span4'i><'span4'l><'span4'p>>",
+                      "sPaginationType": "bootstrap",
+                      "oLanguage": {
+                        "sLengthMenu": "每页记录数  _MENU_",
+                        "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                      "oPaginate": {
+                        "sPrevious": "前一页",
+                        "sNext": "后一页",
+                      },
+                      "sZeroRecords": "抱歉， 没有找到",
+                      "sInfoEmpty": "没有数据"
+                      }  
+        });
 	$('.btn-close').click(function(e){
 		e.preventDefault();
 		$(this).parent().parent().parent().fadeOut();
