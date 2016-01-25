@@ -170,7 +170,7 @@
 	        <li>
                   <a class="dropmenu" href="#">
                     <i class="icon-list-alt"></i>
-                    <span class="hidden-table"> 项目管理</span>
+                    <span class="hidden-tablet"> 项目管理</span>
                   </a>
 	          <ul>
 		    <li>
@@ -292,8 +292,240 @@
 	        <a href="index.html">Home</a> 
 	        <i class="icon-angle-right"></i>
 	      </li>
-	      <li><a href="#">File Manager</a></li>
+	      <li><a href="#">资产</a></li>
 	    </ul>
+            <div class="row-fluid sortable">
+              <div class="box span12">
+                <div class="box-content">
+                  <div class="span4 pull-left">
+                    <a class="btn btn-info" onclick="showpackge();"><i class="halflings-icon folder-open white"></i>应用包</a>
+                    <a class="btn btn-info" onclick="showsnapshoot();"><i class="icon-cog"></i>系统快照</a>
+                    <a class="btn btn-info" onclick="showmodule();"><i class="icon-cogs"></i>Puppet模块</a>
+                  </div>
+                  <hr />
+                  <div id="packge" style="display:block;">
+                    <div class="row-fluid">
+		      <div class="span6">
+			<h1>应用包</h1>
+                        <div class="todo">
+			    <ul class="todo-list messagesList">
+                              <li>
+                                <span class="from">
+                                  <a class="btn btn-success btn-mini" id="appname" onclick="showdetails()">应用一v1.01.war</a>
+                                </span>
+                                <span class="title">这是应用一的第一个版本</span>
+                                <span class="label label-important">v1.01</span>
+                                <span class="todo-actions">
+                                  <a href="#"><i class="halflings-icon fast-backward" title="回退到该版本"></i></a>
+                                  <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="from">
+                                  <a class="btn btn-success btn-mini" id="appname" onclick="showdetails()">应用一v1.02.war</a>
+                                </span>
+                                <span class="title">这是应用一的第二个版本</span>
+                                <span class="label label-important">v1.02</span>
+                                <span class="todo-actions">
+                                  <a href="#"><i class="halflings-icon fast-backward" title="回退到该版本"></i></a>
+                                  <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="from">
+                                  <a class="btn btn-success btn-mini" id="appname" onclick="showdetails()">应用二v1.01.war</a>
+                                </span>
+                                <span class="title">这是应用二的第一个版本</span>
+                                <span class="label label-important">v1.01</span>
+                                <span class="todo-actions">
+                                  <a href="#"><i class="halflings-icon fast-backward" title="回退到该版本"></i></a>
+                                  <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="from">
+                                  <a class="btn btn-success btn-mini" id="appname" onclick="showdetails()">应用三v1.01.war</a>
+                                </span>
+                                <span class="title">这是应用三的第一个版本</span>
+                                <span class="label label-important">v1.01</span>
+                                <span class="todo-actions">
+                                  <a href="#"><i class="halflings-icon fast-backward" title="回退到该版本"></i></a>
+                                  <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                                </span>
+                              </li>
+			    </ul>
+			  </div>
+		        </div>
+		        <div class="span5 noMarginLeft">
+			  <div class="message dark">
+			    <div class="header">
+			    <h1>应用包详情</h1>
+			    <div class="from"><i class="halflings-icon font"></i>应用<b id="app">:应用</b></div>
+			    <div class="date"><i class="halflings-icon tag"></i> 版本, <b id="version">v1.01</b></div>
+			    <div class="menu"></div>
+			  </div>
+			  <div class="content">
+			    <p>
+			      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			    </p>
+			    <p>
+			      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			    </p>	
+			  </div>
+			</div>	
+		      </div>
+		    </div>
+		  </div> <!--packge-->
+		  <div id="snapshoot" style="display:none;">
+		    <div class="row-fluid">
+		      <div class="span6">
+			<h1>快照</h1>
+                        <div class="todo">
+			  <ul class="todo-list messagesList">
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showsnapshootd()">快照一</a>
+                              </span>
+                              <span class="title">这是localhost的第一个快照</span>
+                              <span class="label label-important">2016-1-15 PM 14：12：56</span>
+                              <span class="todo-actions">
+                                <a href="#"><i class="halflings-icon refresh" title="恢复"></i></a>
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showsnapshootd()">快照二</a>
+                              </span>
+                              <span class="title">这是localhost的第二个快照</span>
+                              <span class="label label-important">2016-1-15 PM 16：22：16</span>
+                              <span class="todo-actions">
+                                <a href="#"><i class="halflings-icon refresh" title="恢复"></i></a>
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showsnapshootd()">快照三</a>
+                              </span>
+                              <span class="title">这是localhost的第三个快照</span>
+                              <span class="label label-important">2016-1-16 AM 8：16：26</span>
+                              <span class="todo-actions">
+                                <a href="#"><i class="halflings-icon refresh" title="恢复"></i></a>
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showsnapshootd()">快照四</a>
+                              </span>
+                              <span class="title">这是localhost的第四个快照</span>
+                              <span class="label label-important">2016-1-17 PM 14：52：36</span>
+                              <span class="todo-actions">
+                                <a href="#"><i class="halflings-icon refresh" title="恢复"></i></a>
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除应用包"></i></a>
+                              </span>
+                            </li>
+			  </ul> 
+			</div>
+		      </div>
+	              <div class="span5 noMarginLeft">
+			<div class="message dark">
+			  <div class="header">
+			    <h1>快照详情</h1>
+			    <div class="from"><i class="halflings-icon camera"></i>快照<b id="snapshootd">:快照一</b></div>
+                            <div class="date" id="time"><i class="halflings-icon time"></i>2016-1-15, <b>14:12:56 PM</b></div>
+			    <div class="menu"></div>
+			  </div>
+			  <div class="content">
+			    <p>
+			      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			    </p>
+			    <p>
+			      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			    </p>	
+			  </div>
+			</div>	
+		      </div>	      
+		    </div>
+                  </div>
+                  <div id="module" style="display:none;" class="row-fluid">
+                    <div class="row-fluid">
+		      <div class="span6">
+			<h1>Puppet模块</h1>
+                        <div class="todo">
+			  <ul class="todo-list messagesList">
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showmodeld()">模块一</a>
+                              </span>
+                              <span class="title">这是模块一</span>
+                              <span class="label label-important">核心业务</span>
+                              <span class="todo-actions">
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除模块"></i></a>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showmodeld()">模块二</a>
+                              </span>
+                              <span class="title">这是模块二</span>
+                              <span class="label label-important">核心业务</span>
+                              <span class="todo-actions">
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除模块"></i></a>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showmodeld()">模块三</a>
+                              </span>
+                              <span class="title">这是模块三</span>
+                              <span class="label label-important">核心业务</span>
+                              <span class="todo-actions">
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除模块"></i></a>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="from">
+                                <a class="btn btn-success btn-mini" onclick="showmodeld()">模块四</a>
+                              </span>
+                              <span class="title">这是模块四</span>
+                              <span class="label label-important">核心业务</span>
+                              <span class="todo-actions">
+                                <a href="#" class="todo-remove"><i class="halflings-icon remove" title="删除模块"></i></a>
+                              </span>
+                            </li>
+			  </ul>
+			</div>
+		      </div>
+		      <div class="span5 noMarginLeft">
+			<div class="message dark">
+			  <div class="header">
+			    <h1>快照详情</h1>
+			    <div class="from"><i class="halflings-icon th-large"></i>模块<b id="modeld">:模块一</b></div>
+			    <div class="date"><i class="halflings-icon list-alt"></i><b>核心业务</b></div>
+			    <div class="menu"></div>
+			  </div>
+			  <div class="content">
+	                    <pre>class test::test {
+file { "/tmp/sky":
+owner  => root,
+group  => root,
+ensure => present,
+content => "www.mysqlops.com test by sky",
+mode    => 644,
+ }
+ }</pre> 		    
+			  </div>
+			</div>	
+		      </div>
+		    </div>
+                  </div>
+                </div><!--box-->
+              </div>
+            <!--end: Main contet-->
+	    </div>
+            
 	  </div><!--/.fluid-container-->
         </div>
       </div>
@@ -367,6 +599,64 @@
       <script src="js/retina.js"></script>
 
       <script src="js/custom.js"></script>
+
+      <script type="text/javascript">
+        function showpackge(){
+          var div_packge = document.getElementById("packge");
+	  var div_module = document.getElementById("module");
+	  var div_snapshoot = document.getElementById("snapshoot");
+	  if(div_packge.style.display=='none') div_packge.style.display='block';
+	  if(div_module.style.display='block') div_module.style.display='none';
+	  if(div_snapshoot.style.display='block') div_snapshoot.style.display='none';
+        } 
+      
+        function showmodule(){
+          var div_packge = document.getElementById("packge");
+	  var div_module = document.getElementById("module");
+	  var div_snapshoot = document.getElementById("snapshoot");
+	  if(div_packge.style.display=='block') div_packge.style.display='none';
+	  if(div_module.style.display='none') div_module.style.display='block';
+	  if(div_snapshoot.style.display='block') div_snapshoot.style.display='none';
+        }
+      
+        function showsnapshoot(){
+          var div_packge = document.getElementById("packge");
+	  var div_module = document.getElementById("module");
+	  var div_snapshoot = document.getElementById("snapshoot");
+	  if(div_packge.style.display=='block') div_packge.style.display='none';
+	  if(div_module.style.display='block') div_module.style.display='none';
+	  if(div_snapshoot.style.display='none') div_snapshoot.style.display='block';
+	} 
+      </script>
+      <script type="text/javascript">
+        function showdetails(event){
+          event = event ? event : window.event; 
+          var obj = event.srcElement ? event.srcElement : event.target; 
+          var div_app = document.getElementById("app");
+          var b_version =  document.getElementById("version");
+          var app = obj.innerHTML.substr(0,3);
+          var version = obj.innerHTML.substr(3,5);
+          div_app.innerHTML = ":"+app;
+          b_version.innerHTML = version;
+        }
+
+        function showsnapshootd(event){
+          event = event ? event : window.event; 
+          var obj = event.srcElement ? event.srcElement : event.target; 
+          var div_snapshoot = document.getElementById("snapshootd");
+          var app = obj.innerHTML.substr(0,3);
+          div_snapshoot.innerHTML = ":"+app;
+        }
+
+        function showmodeld(event){
+          event = event ? event : window.event; 
+          var obj = event.srcElement ? event.srcElement : event.target; 
+          var div_model = document.getElementById("modeld");
+          var app = obj.innerHTML.substr(0,3);
+          div_model.innerHTML = ":"+app;
+        }
+      </script>
+         
       <!-- end: JavaScript-->	
   </body>
 </html>
