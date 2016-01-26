@@ -2287,4 +2287,11 @@ function widthFunctions(e) {
 		
 	}
 
+	/* ---------- Cluster Edit Tabs ---------- */
+	$('#clusterTabs1 a:first').tab('show');
+	$('#clusterTabs1 a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	});
+
 }
