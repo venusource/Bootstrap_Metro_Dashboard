@@ -203,7 +203,7 @@
 	</div>
       </div>
 
-      <!-- start: Header -->
+      <!-- end: Header -->
       <div class="container-fluid-full">
 	<div class="row-fluid">
 			
@@ -343,248 +343,247 @@
 	        <a href="index.html">Home</a> 
 	        <i class="icon-angle-right"></i>
 	      </li>
-	      <li><a href="#">cluster</a></li>
+	      <li><i class="icon-sitemap"></i><a href="#">cluster</a></li>
 	    </ul>
-           <!--start: Main contet-->
-            <div class="row-fluid sortable">
-              <div class="box span12">
-                <div class="box-content">
-                    <div class="span4 pull-left">
-                      <a class="btn btn-info" onclick="showlist();"><i class="halflings-icon th-list"></i>列表</a>
-                      <a class="btn btn-info" onclick="showmodule();"><i class="halflings-icon th-large"></i>模块</a>
+          <!--start: Main contet-->
+          <div class="row-fluid sortable">
+              <div class="span4 pull-left">
+                <a class="btn btn-info" onclick="showlist();"><i class="halflings-icon th-list"></i>列表</a>
+                <a class="btn btn-info" onclick="showmodule();"><i class="halflings-icon th-large"></i>模块</a>
+              </div>
+              <div class="span2 pull-right">
+                <a class="btn btn-success" href="vscreatecluster.html"><i class="halflings-icon plus"></i>新集群</a>
+              </div>
+              <div class="span2 pull-right">
+              </div>
+              <hr />
+             <div id="list" style="display:block;">
+              <table class="table table-striped table-bordered bootstrap-datatable datatable">
+              <thead>
+                <tr>
+                  <th>集群名称</th>
+                  <th>vic版本</th>
+                  <th>系统版本</th>
+                  <th>部署主机</th>
+                  <th>是否HA</th>
+                  <th>部署进度</th>
+                  <th>状态</th>
+                  <th>部署日期</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>vic-1</td>
+                  <td class="center">2014.1.3</td>
+                  <td class="center">centos6.5</td>
+                  <td class="center">
+                    <a href="#" data-rel="popover" data-html="true" data-content="controller:主机1<br>compute:主机2,主机3" title="部署主机">点击查看</a>
+                  </td>
+                  <td class="center">是</td>
+                  <td class="center">
+                    <div class="progress progress-striped">
+                      <div class="bar" style="width: 100%;"></div>
                     </div>
-                    <div class="span2 pull-right">
-                      <a class="btn btn-success" href="vscreatecluster.html"><i class="halflings-icon plus"></i>新集群</a>
-                    </div>
-                    <div class="span2 pull-right">
-                    </div>
-                    <hr />
-                   <div id="list" style="display:block;">
-                    <table class="table table-striped table-bordered bootstrap-datatable datatable">
-                    <thead>
-                      <tr>
-                        <th>集群名称</th>
-                        <th>vic版本</th>
-                        <th>系统版本</th>
-                        <th>部署主机</th>
-                        <th>是否HA</th>
-                        <th>部署进度</th>
-                        <th>状态</th>
-                        <th>部署日期</th>
-                        <th>操作</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>vic-1</td>
-                        <td class="center">2014.1.3</td>
-                        <td class="center">centos6.5</td>
-                        <td class="center">
-                          <a href="#" data-rel="popover" data-html="true" data-content="controller:主机1<br>compute:主机2,主机3" title="部署主机">点击查看</a>
-                        </td>
-                        <td class="center">是</td>
-                        <td class="center">
-                          <div class="progress progress-striped">
-                            <div class="bar" style="width: 100%;"></div>
-                          </div>
-                        </td>
-                        <td class="center">
-                          <span class="label label-success">Active</span>
-                        </td>
-                        <td class="center">2016-1-15 AM 10:47:58</td>
-                        <td class="center">
-                          <a class="btn btn-success" href="#">
-                            <i class="halflings-icon white zoom-in"></i>  
-                          </a>
-                          <a class="btn btn-info" href="vseditcluster.html">
-                            <i class="halflings-icon white edit"></i>  
-                          </a>
-                          <a class="btn btn-danger" href="#delete" data-toggle="modal">
-                            <i class="halflings-icon white trash"></i> 
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                 </div> <!--list-->
-                 <div id="module" style="display:none;" class="row-fluid">
-                    <div class="box span4">
-                      <div class="box-header">
-                        <div class="box-icon">
-                          <a href="#">
-                            <i class="halflings-icon zoom-in"></i>  
-                          </a>
-                          <a href="#">
-                            <i class="halflings-icon edit"></i>  
-                          </a>
-                          <a href="#">
-                            <i class="halflings-icon trash"></i> 
-                          </a>
-                        </div>
-                      </div>
-                      <div class="box-content">
-                        <table class="table table-bordered table-striped">
-                          <tr>
-                            <td>应用名</td>
-                            <td>
-                              <span>应用1</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>应用类型</td>
-                            <td>
-                              <span>mysql</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>版本</td>
-                            <td>
-                              <span>v1.1</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>所在主机</td>
-                            <td>
-                              <span>主机一</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>状态</td>
-                            <td>
-                              <span class="label label-success">Active</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>创建日期</td>
-                            <td>
-                              <span>2016-1-15 PM 15:41:26</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                    <!--应用2-->
-                     <div class="box span4">
-                      <div class="box-header">
-                        <div class="box-icon">
-                          <a href="#">
-                            <i class="halflings-icon zoom-in"></i>  
-                          </a>
-                          <a href="#">
-                            <i class="halflings-icon edit"></i>  
-                          </a>
-                          <a href="#">
-                            <i class="halflings-icon trash"></i> 
-                          </a>
-                        </div>
-                      </div>
-                      <div class="box-content">
-                        <table class="table table-bordered table-striped">
-                          <tr>
-                            <td>应用名</td>
-                            <td>
-                              <span>应用2</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>应用类型</td>
-                            <td>
-                              <span>tomcat</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>版本</td>
-                            <td>
-                              <span>v2.0</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>所在主机</td>
-                            <td>
-                              <span>主机一</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>状态</td>
-                            <td>
-                              <span class="label label-success">Active</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>创建日期</td>
-                            <td>
-                              <span>2016-1-15 PM 13:47:18</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                    <!--应用2-->
-                    <!--应用3-->
-                     <div class="box span4">
-                      <div class="box-header">
-                        <div class="box-icon">
-                          <a href="#">
-                            <i class="halflings-icon zoom-in"></i>  
-                          </a>
-                          <a href="#">
-                            <i class="halflings-icon edit"></i>  
-                          </a>
-                          <a href="#">
-                            <i class="halflings-icon trash"></i> 
-                          </a>
-                        </div>
-                      </div>
-                      <div class="box-content">
-                        <table class="table table-bordered table-striped">
-                          <tr>
-                            <td>应用名</td>
-                            <td>
-                              <span>应用3</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>应用类型</td>
-                            <td>
-                              <span>mongodb</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>版本</td>
-                            <td>
-                              <span>v1.4</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>所在主机</td>
-                            <td>
-                              <span>主机二</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>状态</td>
-                            <td>
-                              <span class="label label-error">Error</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>创建日期</td>
-                            <td>
-                              <span>2016-1-16 PM 15:41:26</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                    <!--应用-->
+                  </td>
+                  <td class="center">
+                    <span class="label label-success">Active</span>
+                  </td>
+                  <td class="center">2016-1-15 AM 10:47:58</td>
+                  <td class="center">
+                    <a class="btn btn-success" href="#">
+                      <i class="halflings-icon white zoom-in"></i>  
+                    </a>
+                    <a class="btn btn-info" href="vscreatecluster.html">
+                      <i class="halflings-icon white edit"></i>  
+                    </a>
+                    <a class="btn btn-danger" href="#delete" data-toggle="modal">
+                      <i class="halflings-icon white trash"></i> 
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+           </div> <!--list-->
+           <div id="module" style="display:none;" class="row-fluid">
+              <div class="box span4">
+                <div class="box-header">
+                  <div class="box-icon">
+                    <a href="#">
+                      <i class="halflings-icon zoom-in"></i>  
+                    </a>
+                    <a href="vscreatecluster.html">
+                      <i class="halflings-icon edit"></i>  
+                    </a>
+                    <a href="#delete" data-toggle="modal">
+                      <i class="halflings-icon trash"></i> 
+                    </a>
+                  </div>
                 </div>
-              </div><!--box-->
-            </div>
-            <!--end: Main contet-->
-	  </div><!--/.fluid-container-->
+                <div class="box-content">
+                  <table class="table table-bordered table-striped">
+                    <tr>
+                      <td>应用名</td>
+                      <td>
+                        <span>应用1</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>应用类型</td>
+                      <td>
+                        <span>mysql</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>版本</td>
+                      <td>
+                        <span>v1.1</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>所在主机</td>
+                      <td>
+                        <span>主机一</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>状态</td>
+                      <td>
+                        <span class="label label-success">Active</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>创建日期</td>
+                      <td>
+                        <span>2016-1-15 PM 15:41:26</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!--应用2-->
+               <div class="box span4">
+                <div class="box-header">
+                  <div class="box-icon">
+                    <a href="#">
+                      <i class="halflings-icon zoom-in"></i>  
+                    </a>
+                    <a href="vscreatecluster.html">
+                      <i class="halflings-icon edit"></i>  
+                    </a>
+                    <a href="#delete" data-toggle="modal">
+                      <i class="halflings-icon trash"></i> 
+                    </a>
+                  </div>
+                </div>
+                <div class="box-content">
+                  <table class="table table-bordered table-striped">
+                    <tr>
+                      <td>应用名</td>
+                      <td>
+                        <span>应用2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>应用类型</td>
+                      <td>
+                        <span>tomcat</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>版本</td>
+                      <td>
+                        <span>v2.0</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>所在主机</td>
+                      <td>
+                        <span>主机一</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>状态</td>
+                      <td>
+                        <span class="label label-success">Active</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>创建日期</td>
+                      <td>
+                        <span>2016-1-15 PM 13:47:18</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!--应用2-->
+              <!--应用3-->
+               <div class="box span4">
+                <div class="box-header">
+                  <div class="box-icon">
+                    <a href="#">
+                      <i class="halflings-icon zoom-in"></i>  
+                    </a>
+                    <a href="vscreatecluster.html">
+                      <i class="halflings-icon edit"></i>  
+                    </a>
+                    <a href="#delete" data-toggle="modal">
+                      <i class="halflings-icon trash"></i> 
+                    </a>
+                  </div>
+                </div>
+                <div class="box-content">
+                  <table class="table table-bordered table-striped">
+                    <tr>
+                      <td>应用名</td>
+                      <td>
+                        <span>应用3</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>应用类型</td>
+                      <td>
+                        <span>mongodb</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>版本</td>
+                      <td>
+                        <span>v1.4</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>所在主机</td>
+                      <td>
+                        <span>主机二</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>状态</td>
+                      <td>
+                        <span class="label label-error">Error</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>创建日期</td>
+                      <td>
+                        <span>2016-1-16 PM 15:41:26</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!--应用-->
+          </div><!--box-->
+          </div>
+          <!--end: Main contet-->
         </div>
       </div>
+    </div>
 		
+  <div class="clearfix"></div>
+	
       <footer>
         <p>
 	  <span style="text-align:left;float:left">&copy; 2013 
